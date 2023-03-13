@@ -13,3 +13,5 @@ except ValueError:
     print('File have letter.')
 except Exception as e:
     print(e, type(e))
+finally:
+    f.close()
