@@ -1,7 +1,9 @@
 def decorator(func):
     cache = [['Dima', 111], ['Vladislav', 222]]
 
-    def wrapper(name, password):
+    def wrapper(*args):
+        name = input('Enter your name: ')
+        password = int(input('Enter your password: '))
         nonlocal cache
         res = [name, password]
         if res in cache:
@@ -12,15 +14,8 @@ def decorator(func):
 
 
 @decorator
-def autoriz(name, password):
-    return f'Name: {name}, password: {password}'
+def autoriz():
+    print('Hello')
 
 
-try:
-    name = input('Enter your name: ')
-    password = int(input('Enter your password: '))
-    autoriz(name, password)
-except ValueError:
-    print('Please, enter your password only numbers.')
-except Exception as e:
-    print(e, type(e))
+autoriz()
