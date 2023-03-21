@@ -12,14 +12,9 @@ class Person:
         self.dog = dog
 
     def bark(self):
-        try:
-            if self.dog:
-                return f"Gav"
-        except Exception as e:
-            print(e, type(e))
-            print('Maybe you haven`t dog')
+        print('Gav')
 
 
 pers1 = Person('Dima', 26, 'M')
 pers1.add_dog('labrador')
-print(pers1.bark())
+print(hasattr(pers1, 'dog'))
