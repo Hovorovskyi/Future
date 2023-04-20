@@ -8,7 +8,8 @@ class Dog:
     def bark(self):
         return f"Name is: {self.name}. Breed is: {self.breed}"
 
+      
+if __name__ == '__main__':
+    dog1 = Dog('Honye', 'labrador', 5)
 
-dog1 = Dog('Honye', 'labrador', 5)
-
-print(dog1.bark())
+    print(dog1.bark())
